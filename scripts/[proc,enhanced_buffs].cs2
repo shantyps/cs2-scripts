@@ -1,6 +1,6 @@
 // 4673
 [proc,enhanced_buffs](component $component0, component $component1, int $int2)(int)
-if (~on_enhanced = 0) {
+if (~on_enhanced_any = 0) {
 	return($int2);
 }
 def_int $int3 = 0;
@@ -8,6 +8,14 @@ if (~buff_bar_buff_create($component0, $int2, $component1, struct_3077, -1) = 1)
 	$int2 = calc($int2 + 1);
 }
 if (~buff_bar_buff_create($component0, $int2, $component1, struct_3078, -1) = 1) {
+	$int2 = calc($int2 + 1);
+}
+if (~buff_bar_buff_create($component0, $int2, $component1, struct_3741, -1) = 1) {
+	$int2 = calc($int2 + 1);
+} else if (~buff_bar_buff_create($component0, $int2, $component1, struct_3740, -1) = 1) {
+	$int2 = calc($int2 + 1);
+}
+if (~buff_bar_buff_create($component0, $int2, $component1, struct_3763, -1) = 1) {
 	$int2 = calc($int2 + 1);
 }
 if (~buff_bar_buff_create($component0, $int2, $component1, struct_3092, -1) = 1) {
@@ -44,6 +52,15 @@ if (~buff_bar_buff_create($component0, $int2, $component1, struct_3082, -1) = 1)
 	$int2 = calc($int2 + 1);
 }
 if (~buff_bar_buff_create($component0, $int2, $component1, struct_3079, -1) = 1) {
+	$int2 = calc($int2 + 1);
+}
+if (~buff_bar_buff_create($component0, $int2, $component1, struct_3765, -1) = 1) {
+	$int2 = calc($int2 + 1);
+}
+if (~buff_bar_buff_create($component0, $int2, $component1, struct_3766, -1) = 1) {
+	$int2 = calc($int2 + 1);
+}
+if (~buff_bar_buff_create($component0, $int2, $component1, struct_3767, -1) = 1) {
 	$int2 = calc($int2 + 1);
 }
 if (~buff_bar_buff_create($component0, $int2, $component1, struct_3661, -1) = 1) {

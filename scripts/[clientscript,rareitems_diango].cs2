@@ -1,5 +1,5 @@
 // 450
-[clientscript,rareitems_diango](int $flags0, int $flags1, int $flags2, int $flags3, int $flags4, string $text0)
+[clientscript,rareitems_diango](string $text0, int $flags0, int $flags1, int $flags2, int $flags3, int $flags4)
 if_settext($text0, interface_78:1);
 cc_deleteall(interface_78:3);
 cc_deleteall(interface_78:4);
@@ -9,7 +9,7 @@ def_int $int7 = 0;
 def_int $int8 = 0;
 def_namedobj $namedobj9 = null;
 def_int $int10 = 0;
-while ($int10 <= 145) {
+while ($int10 <= 152) {
 	if ($int10 < 32) {
 		if (testbit($flags0, $int10) = ^true) {
 			$int8 = 1;
@@ -85,4 +85,4 @@ if ($int6 <= if_getheight(interface_78:3)) {
 }
 if_setscrollpos(0, 0, interface_78:3);
 ~scrollbar_vertical(interface_78:4, interface_78:3, "scrollbar_parchment_dragger_v2,3", "scrollbar_parchment_dragger_v2,0", "scrollbar_parchment_dragger_v2,1", "scrollbar_parchment_dragger_v2,2", "scrollbar_parchment_v2,0", "scrollbar_parchment_v2,1");
-if_setoninvtransmit("script474($flags0, $flags1, $flags2, $flags3, $flags4){inv}", interface_78:3);
+if_setoninvtransmit("rareitems_diango_update($flags0, $flags1, $flags2, $flags3, $flags4){inv}", interface_78:3);

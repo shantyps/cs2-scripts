@@ -61,7 +61,7 @@ if (%varbit9161 > 0 & %varbit9161 < 6) {
 }
 if (%varbit13006 = 1) {
 	$int2 = 0;
-	$string0 = append($string0, "<br><col=ffffff>Low Life</col><br><br>");
+	$string0 = append($string0, "<br><col=ffffff>Low Life:</col><br><br>");
 	$string0 = append($string0, "You have a Low Life item equipped. You will gain additional stat bonuses when you are below <tostring(40)>% of your base Hitpoints.");
 }
 if ($int2 = 1 & %varbit10535 = 0) {

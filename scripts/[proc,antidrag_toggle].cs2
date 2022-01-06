@@ -1,5 +1,8 @@
 // 4619
 [proc,antidrag_toggle]
+if (~on_enhanced_desktop = 0) {
+	return;
+}
 if (%varbit12345 = 1) {
 	setantidrag(true);
 } else {

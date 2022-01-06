@@ -33,9 +33,11 @@ def_int $intarray0(calc($count15 + 1));
 def_enum $enum32 = enum_3981;
 def_int $index33 = 0;
 def_int $count34 = enum_getoutputcount($enum32);
+def_struct $struct35 = null;
 while ($count16 < $count34) {
-	$index33 = struct_param(enum(int, struct, $enum32, $count16), param_1312);
-	if ($index33 <= $count15) {
+	$struct35 = enum(int, struct, $enum32, $count16);
+	$index33 = struct_param($struct35, param_1312);
+	if ($index33 <= $count15 & ~ca_task_is_disabled($struct35) = 0) {
 		$intarray0($index33) = calc($intarray0($index33) + 1);
 	}
 	$count16 = calc($count16 + 1);
@@ -44,8 +46,9 @@ $count16 = 0;
 $enum32 = enum_3982;
 $count34 = enum_getoutputcount($enum32);
 while ($count16 < $count34) {
-	$index33 = struct_param(enum(int, struct, $enum32, $count16), param_1312);
-	if ($index33 <= $count15) {
+	$struct35 = enum(int, struct, $enum32, $count16);
+	$index33 = struct_param($struct35, param_1312);
+	if ($index33 <= $count15 & ~ca_task_is_disabled($struct35) = 0) {
 		$intarray0($index33) = calc($intarray0($index33) + 1);
 	}
 	$count16 = calc($count16 + 1);
@@ -54,8 +57,9 @@ $count16 = 0;
 $enum32 = enum_3983;
 $count34 = enum_getoutputcount($enum32);
 while ($count16 < $count34) {
-	$index33 = struct_param(enum(int, struct, $enum32, $count16), param_1312);
-	if ($index33 <= $count15) {
+	$struct35 = enum(int, struct, $enum32, $count16);
+	$index33 = struct_param($struct35, param_1312);
+	if ($index33 <= $count15 & ~ca_task_is_disabled($struct35) = 0) {
 		$intarray0($index33) = calc($intarray0($index33) + 1);
 	}
 	$count16 = calc($count16 + 1);
@@ -64,8 +68,9 @@ $count16 = 0;
 $enum32 = enum_3984;
 $count34 = enum_getoutputcount($enum32);
 while ($count16 < $count34) {
-	$index33 = struct_param(enum(int, struct, $enum32, $count16), param_1312);
-	if ($index33 <= $count15) {
+	$struct35 = enum(int, struct, $enum32, $count16);
+	$index33 = struct_param($struct35, param_1312);
+	if ($index33 <= $count15 & ~ca_task_is_disabled($struct35) = 0) {
 		$intarray0($index33) = calc($intarray0($index33) + 1);
 	}
 	$count16 = calc($count16 + 1);
@@ -74,8 +79,9 @@ $count16 = 0;
 $enum32 = enum_3985;
 $count34 = enum_getoutputcount($enum32);
 while ($count16 < $count34) {
-	$index33 = struct_param(enum(int, struct, $enum32, $count16), param_1312);
-	if ($index33 <= $count15) {
+	$struct35 = enum(int, struct, $enum32, $count16);
+	$index33 = struct_param($struct35, param_1312);
+	if ($index33 <= $count15 & ~ca_task_is_disabled($struct35) = 0) {
 		$intarray0($index33) = calc($intarray0($index33) + 1);
 	}
 	$count16 = calc($count16 + 1);
@@ -84,8 +90,9 @@ $count16 = 0;
 $enum32 = enum_3986;
 $count34 = enum_getoutputcount($enum32);
 while ($count16 < $count34) {
-	$index33 = struct_param(enum(int, struct, $enum32, $count16), param_1312);
-	if ($index33 <= $count15) {
+	$struct35 = enum(int, struct, $enum32, $count16);
+	$index33 = struct_param($struct35, param_1312);
+	if ($index33 <= $count15 & ~ca_task_is_disabled($struct35) = 0) {
 		$intarray0($index33) = calc($intarray0($index33) + 1);
 	}
 	$count16 = calc($count16 + 1);
@@ -106,7 +113,7 @@ while ($count16 <= $count15) {
 		$int22 = struct_param($struct20, param_1315);
 		$int29 = ~ca_specific_taskcount($int22);
 		$int30 = $intarray0($int22);
-		if ($int29 = $int30) {
+		if ($int29 = $int30 & $int30 > 0) {
 			$colour31 = 0x0dc10d;
 		} else {
 			$colour31 = 0xff9933;
@@ -141,7 +148,9 @@ while ($count16 <= $count15) {
 		cc_settextfont(p11_full);
 		cc_settextalign(^settextalign_centre, ^settextalign_centre, 0);
 		cc_settextshadow(true);
-		$int28 = ~script4807($component3, $int30, $int29, $int28, calc($int18 + 8), calc($int17 + 53), calc($int25 - 16), ^settextalign_centre, 0x0dc10d, 0);
+		if ($int30 > 0) {
+			$int28 = ~ca_setup_progress_bar($component3, $int30, $int29, $int28, calc($int18 + 8), calc($int17 + 53), calc($int25 - 16), ^settextalign_centre, 0x0dc10d, 0);
+		}
 		$int26 = ~dynamic_stone_button_filled($component5, $component6, "", $int18, $int17, $int25, $int19, $int26, $int13, 1);
 		if (cc_find($component6, $int13) = ^true) {
 			cc_setop(1, "View");

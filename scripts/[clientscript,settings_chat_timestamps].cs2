@@ -1,4 +1,7 @@
 // 4586
 [clientscript,settings_chat_timestamps]
+if (~on_enhanced_any = 0) {
+	return;
+}
 chat_settimestamps(%varbit12384);
 ~rebuildchatbox(~script553);

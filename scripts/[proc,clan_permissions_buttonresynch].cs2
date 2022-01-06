@@ -1,13 +1,13 @@
 // 4465
 [proc,clan_permissions_buttonresynch](component $component0, int $int1, int $comsubid2, int $comsubid3, int $comsubid4, struct $struct5)
 def_int $int6 = 126;
-def_int $clanslot7 = -1;
+def_int $clanslot7 = null;
 def_int $int8 = 0;
 def_string $text0 = "...";
 def_graphic $graphic9 = null;
 def_int $int10 = 0;
 def_int $int11 = -1;
-if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = true | %varbit12165 = 0 & %varbit933 = 3 & activeclansettings_find_affined(0) = true) {
+if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = true | %varbit12165 = 0 & %varbit933 = 3 & activeclansettings_find_affined(^clantype_clan) = true) {
 	$clanslot7 = activeclansettings_getaffinedslot(removetags(chat_playername));
 	if (struct_param($struct5, param_1255) = true) {
 		$int6 = -1;
@@ -20,7 +20,7 @@ if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = tru
 				}
 			case guest_minimum_combat_2958 :
 				if (activeclansettings_getallowunaffined = true) {
-					$int8 = ~getbit_range(%varclansetting26, 0, 6);
+					$int8 = getbit_range(%varclansetting26, 0, 6);
 					if ($int8 > 0 & %varclansetting26 ! -1) {
 						$text0 = tostring($int8);
 					} else {
@@ -31,7 +31,7 @@ if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = tru
 				}
 			case guest_minimum_skill_total_2959 :
 				if (activeclansettings_getallowunaffined = true) {
-					$int8 = ~getbit_range(%varclansetting26, 7, 18);
+					$int8 = getbit_range(%varclansetting26, 7, 18);
 					if ($int8 > 0 & %varclansetting26 ! -1) {
 						$text0 = ~tostring_spacer($int8, ",");
 					} else {
@@ -42,7 +42,7 @@ if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = tru
 				}
 			case guest_minimum_qp_2960 :
 				if (activeclansettings_getallowunaffined = true) {
-					$int8 = ~getbit_range(%varclansetting26, 19, 29);
+					$int8 = getbit_range(%varclansetting26, 19, 29);
 					if ($int8 > 0 & %varclansetting26 ! -1) {
 						$text0 = tostring($int8);
 					} else {
@@ -54,7 +54,7 @@ if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = tru
 			case guest_iron_status_2961 :
 				if (activeclansettings_getallowunaffined = true) {
 					if (%varclansetting26 ! -1) {
-						$text0 = enum(int, string, enum_3828, ~getbit_range(%varclansetting26, 30, 31));
+						$text0 = enum(int, string, enum_3828, getbit_range(%varclansetting26, 30, 31));
 					} else {
 						$text0 = enum(int, string, enum_3828, 0);
 					}
@@ -78,7 +78,7 @@ if (%varbit12165 = 1 & %varbit12164 = 3 & activeclansettings_find_listened = tru
 		$int6 = ~clan_permission_get($struct5);
 		$text0, $graphic9 = ~script4302($int6);
 	}
-	if ($clanslot7 ! -1) {
+	if ($clanslot7 ! null) {
 		$int11 = activeclansettings_getaffinedrank($clanslot7);
 		if ($int6 = 128) {
 			$text0 = "<col=9f9f9f><$text0></col>";

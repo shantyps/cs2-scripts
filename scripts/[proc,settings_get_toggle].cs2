@@ -27,6 +27,8 @@ switch_int ($int0) {
 		return(%varbit4608);
 	case 13 :
 		return(%varbit6357);
+	case 209 :
+		return(%varbit13133);
 	case 34 :
 		return(%var171);
 	case 35 :
@@ -91,6 +93,10 @@ switch_int ($int0) {
 		return(%varbit2324);
 	case 73 :
 		return(%varbit3931);
+	case 182 :
+		return(%varbit13039);
+	case 183 :
+		return(%varbit13040);
 	case 82 :
 		return(%varbit11866);
 	case 83 :
@@ -113,8 +119,6 @@ switch_int ($int0) {
 		return(%varbit12379);
 	case 164 :
 		return(%varbit12380);
-	case 165 :
-		return(%varbit12976);
 	case 120 :
 		return(%varbit12349);
 	case 121 :
@@ -167,6 +171,8 @@ switch_int ($int0) {
 		return(%varbit12370);
 	case 145 :
 		return(%varbit12371);
+	case 208 :
+		return(%varbit13134);
 	case 146 :
 		return(%varbit12372);
 	case 148 :
@@ -218,6 +224,39 @@ switch_int ($int0) {
 		return(%varbit12982);
 	case 166 :
 		return(%varbit12983);
+	case 184 :
+		return(%varbit13082);
+	case 185 :
+		return(%varbit13083);
+	case 186 :
+		return(%varbit13084);
+	case 189 :
+		return(%varbit13087);
+	case 190 :
+		return(%varbit13088);
+	case 191 :
+		return(%varbit13089);
+	case 192 :
+		return(%varbit13113);
+	case 195 :
+		return(%varbit13120);
+	case 201 :
+		return(%varbit13122);
+	case 202 :
+		return(%varbit13123);
+	case 203 :
+		return(%varbit13124);
+	case 204 :
+		return(%varbit13125);
+	case 210 :
+		return(%varbit13136);
+	case 206 :
+		if (~deadman_mode ! 0) {
+			return(0);
+		}
+		return(%varbit13131);
+	case 205 :
+		return(%varbit13130);
 	case default :
 		return(0);
 }

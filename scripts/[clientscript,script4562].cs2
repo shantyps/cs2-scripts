@@ -1,13 +1,14 @@
 // 4562
-[clientscript,script4562](int $int0)
-if (~on_enhanced = 0) {
+[clientscript,script4562](int $int0, int $int1, string $string0, string $string1)
+if (~on_enhanced_any = 0) {
 	return;
 }
 ~script4743;
-~script4560;
+~fishing_spot_indicator_tile_setup;
 ~antidrag_toggle;
 ~script4687($int0);
-~script4617(%varbit12372);
+~synch_always_on_top(%varbit12372);
 ~helper_agility_highlight_course(-1);
-~helper_agility_highlight_shortcuts;
+~helper_agility_highlight_setup;
 ~script5183;
+~xptracker_login($int1, $string0, $string1);

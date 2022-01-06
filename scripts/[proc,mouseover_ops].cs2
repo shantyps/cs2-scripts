@@ -1,0 +1,28 @@
+// 4726
+[proc,mouseover_ops]
+def_enum $enum0 = ~toplevel_getcomponents;
+def_component $component1 = enum(component, component, $enum0, interface_161:36);
+if (~on_enhanced_desktop = 0 | %varbit12344 = 1 & %varbit12377 = 0 | $component1 = null) {
+	if_setontimer(null, $component1);
+	cc_deleteall($component1);
+	return;
+}
+if_setontimer("mouseover_ops", $component1);
+cc_deleteall($component1);
+~script5350;
+if (_7108 = true) {
+	return;
+}
+def_int $int2 = 0;
+def_string $string0 = "";
+def_string $string1 = "";
+$string0, $string1 = get_active_minimenu_entry;
+def_string $string2 = "<$string0> <$string1>";
+def_int $int3 = get_minimenu_length;
+def_int $minimenu_entry_type4 = get_active_minimenu_entry_type;
+if (%varbit12377 = 1) {
+	$int2 = ~mouseover_text($int2, $component1, $string2, $minimenu_entry_type4, $int3);
+}
+if (%varbit12344 = 0) {
+	$int2 = ~mouseover_tooltip($int2, $component1, $string2, $minimenu_entry_type4, $int3);
+}
