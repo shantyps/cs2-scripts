@@ -1,0 +1,30 @@
+// 3966
+[proc,settings_set_slider](int $int0, int $int1)
+%varbit9657 = $int0;
+switch_int ($int0) {
+	case 30 :
+		if ($int1 = 0 & %var168 > 0) {
+			%varbit12426 = %var168;
+		}
+		%var168 = ~minmax(0, 100, calc($int1 * 5));
+		~setvolumemusic;
+	case 31 :
+		if ($int1 = 0 & %var169 > 0) {
+			%varbit12427 = %var169;
+		}
+		%var169 = ~minmax(0, 100, calc($int1 * 5));
+		~setvolumesounds;
+	case 32 :
+		if ($int1 = 0 & %var872 > 0) {
+			%varbit12428 = %var872;
+		}
+		%var872 = ~minmax(0, 100, calc($int1 * 5));
+		~setvolumeareasounds;
+	case 15 :
+		%var166 = ~minmax(0, 100, calc($int1 * 5));
+		~setbrightness;
+	case 79 :
+		~settings_interface_scaling($int1);
+	case 168 :
+		~script5193(interpolate(25, 90, 0, calc(struct_param(view_distance_3656, param_1101) - 1), $int1));
+}

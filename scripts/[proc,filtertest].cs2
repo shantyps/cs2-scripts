@@ -1,0 +1,171 @@
+// 90
+[proc,filtertest](int $chattype0, string $string0, string $string1, int $clock1, int $int2, string $string2, int $int3)(int)
+if ($chattype0 = null) {
+	return(0);
+}
+if ($clock1 < %varcint383) {
+	return(0);
+}
+if (enum(int, boolean, enum_892, $chattype0) = true & $chattype0 ! ^chattype_playerrelated) {
+	if ($chattype0 = ^chattype_spam & %varbit26 = 1) {
+		return(0);
+	}
+	return(1);
+}
+def_int $chatfilter4 = null;
+def_string $string3 = "";
+def_int $int5 = -1;
+def_int $int6 = ~script4487;
+switch_int ($chattype0) {
+	case ^chattype_publicchat, ^chattype_modchat :
+		if ($clock1 < %varcint199) {
+			return(0);
+		}
+		if (compare($string2, removetags($string0)) = 0) {
+			return(1);
+		}
+		if ($int3 = 2) {
+			return(0);
+		}
+		$chatfilter4 = chat_getfilter_public;
+		if ($chatfilter4 = ^chatfilter_off | $chatfilter4 = ^chatfilter_hide) {
+			return(0);
+		}
+		if (string_length(chat_getmessagefilter) > 0 & string_indexof_string(lowercase($string1), chat_getmessagefilter, 0) = -1) {
+			return(0);
+		}
+		if ($chatfilter4 = ^chatfilter_friends) {
+			if ($int3 = 1) {
+				return(1);
+			}
+			return(0);
+		}
+		return(1);
+	case ^chattype_autotyper, ^chattype_modautotyper :
+		if ($clock1 < %varcint199) {
+			return(0);
+		}
+		if (compare($string2, removetags($string0)) = 0) {
+			return(1);
+		}
+		if ($int3 = 2) {
+			return(0);
+		}
+		if (chat_getfilter_public ! ^chatfilter_autochat) {
+			return(0);
+		}
+		if (string_length(chat_getmessagefilter) > 0 & string_indexof_string(lowercase($string1), chat_getmessagefilter, 0) = -1) {
+			return(0);
+		}
+		return(1);
+	case ^chattype_privatechat, ^chattype_modprivatechat :
+		if ($clock1 < %varcint175) {
+			return(0);
+		}
+		if ($int3 = 2) {
+			return(0);
+		}
+		if (%var287 = 1 & $int2 = 0 & ~trade_partner_check($chattype0, $string0, $int3) = 0) {
+			return(0);
+		}
+		if (chat_getfilter_private = ^chatfilter_on) {
+			return(1);
+		}
+		if (chat_getfilter_private = ^chatfilter_friends & $int3 = 1) {
+			return(1);
+		}
+		return(0);
+	case ^chattype_tradereq, ^chattype_chalreq_trade :
+		if ($int3 = 2) {
+			return(0);
+		}
+		if (chat_getfilter_trade = ^chatfilter_on) {
+			return(1);
+		}
+		if (chat_getfilter_trade = ^chatfilter_friends & $int3 = 1) {
+			return(1);
+		}
+		return(0);
+	case ^chattype_loginlogoutnotification, ^chattype_privatechatout :
+		if ($clock1 < %varcint175) {
+			return(0);
+		}
+		if ($chattype0 = ^chattype_loginlogoutnotification) {
+			if ($int6 = 2) {
+				return(0);
+			} else if ($int6 = 0 & calc(clientclock - $clock1) >= 500) {
+				return(0);
+			}
+		}
+		if (%var287 = 1 & $int2 = 0 & ~trade_partner_check($chattype0, $string0, $int3) = 0) {
+			return(0);
+		}
+		if (chat_getfilter_private ! ^chatfilter_off) {
+			return(1);
+		}
+		return(0);
+	case ^chattype_friendschat, ^chattype_chalreq_friendschat :
+		if ($clock1 < %varcint439) {
+			return(0);
+		}
+		if (compare($string2, removetags($string0)) = 0) {
+			return(1);
+		}
+		if ($int3 = 2) {
+			return(0);
+		}
+		if (%varbit928 = ^chatfilter_on) {
+			return(1);
+		}
+		if (%varbit928 = ^chatfilter_friends & $int3 = 1) {
+			return(1);
+		}
+		return(0);
+	case ^chattype_friendschatnotification :
+		if ($clock1 < %varcint439) {
+			return(0);
+		}
+		if (%varbit928 ! ^chatfilter_off) {
+			return(1);
+		}
+		return(0);
+	case 41, 44, 43, 46, 109, 110 :
+		if ($clock1 < %varcint440) {
+			return(0);
+		}
+		if (%varbit931 = 1 & ($chattype0 = 41 | $chattype0 = 43)) {
+			return(0);
+		}
+		if (compare($string2, removetags($string0)) = 0) {
+			return(1);
+		}
+		if ($int3 = 2) {
+			return(0);
+		}
+		if (%varbit929 = ^chatfilter_on) {
+			return(1);
+		}
+		if (%varbit929 = ^chatfilter_friends & $int3 = 1) {
+			return(1);
+		}
+		return(0);
+	case ^chattype_trade :
+		if (chat_getfilter_trade ! ^chatfilter_off) {
+			return(1);
+		}
+		return(0);
+	case ^chattype_playerrelated :
+		if ($int3 ! 2) {
+			return(1);
+		}
+		return(0);
+	case ^chattype_broadcast :
+		if ($clock1 < %varcint202) {
+			return(0);
+		}
+		$string1, $string3, $int5 = ~chat_broadcast_parseurl($string1);
+		if ($int5 = 4 & reboottimer > 0) {
+			return(0);
+		}
+}
+return(1);

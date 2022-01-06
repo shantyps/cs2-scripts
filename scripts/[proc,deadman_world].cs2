@@ -1,0 +1,3 @@
+// 1138
+[proc,deadman_world]()(boolean)
+return(~int_to_bool(~deadman_mode));

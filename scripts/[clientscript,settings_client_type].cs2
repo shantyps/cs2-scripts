@@ -1,0 +1,7 @@
+// 440
+[clientscript,settings_client_type](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $layer6)
+if (~on_mobile = true) {
+	if_sethide(true, $component0);
+	return;
+}
+~settings_side_dropdown_create($component0, $component1, $component2, $component3, $component4, $component5, $layer6, "Game client layout", game_client_layout_2732);

@@ -1,0 +1,7 @@
+// 4646
+[clientscript,script4646]
+if (_7038(_6950, 1, 1) = true) {
+	highlight_tile_off(_6950, 1, 1);
+} else {
+	highlight_tile_on(_6950, 1, 1);
+}

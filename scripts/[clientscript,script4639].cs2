@@ -1,0 +1,7 @@
+// 4639
+[clientscript,script4639]
+if (_7023(_6852, _6851, 3, 1) = true) {
+	highlight_obj_off(_6852, _6851, 3, 1);
+} else {
+	highlight_obj_on(_6852, _6851, 3, 1);
+}

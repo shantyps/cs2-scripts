@@ -1,0 +1,7 @@
+// 4630
+[clientscript,script4630]
+if (_7008(_6753, 3) = true) {
+	highlight_npctype_off(_6753, 3);
+} else {
+	highlight_npctype_on(_6753, 3);
+}

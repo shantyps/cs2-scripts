@@ -1,0 +1,5 @@
+// 2042
+[clientscript,aide_map_marker](component $component0, int $comsubid1)
+if (cc_find($component0, $comsubid1) = ^true) {
+	~aide_map_marker($component0);
+}

@@ -1,0 +1,49 @@
+// 3144
+[proc,target_system_redraw](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7)
+if (%varbit6704 = 1) {
+	if_sethide(true, $component2);
+	if_sethide(false, $component1);
+} else {
+	if_sethide(false, $component2);
+	if_sethide(true, $component1);
+}
+if (~on_mobile = true) {
+	~script4729(interface_90:4, $component0, clearbit(clearbit(36578, 13), 12), ^setpos_abs_right, ^setpos_abs_top, false);
+} else if (%varbit6715 = 2) {
+	if (%varbit4143 = 1) {
+		if_setposition(106, 2, ^setpos_abs_left, ^setpos_abs_top, $component0);
+	} else {
+		if_setposition(5, 2, ^setpos_abs_left, ^setpos_abs_top, $component0);
+	}
+	~script4729(interface_90:4, $component0, clearbit(clearbit(52968, 13), 12), ^setpos_abs_left, ^setpos_abs_top, false);
+} else if (%varbit6715 = 3) {
+	if_setposition(0, 2, ^setpos_abs_centre, ^setpos_abs_top, $component0);
+	~script4729(interface_90:4, $component0, clearbit(clearbit(52968, 12), 13), ^setpos_abs_centre, ^setpos_abs_top, false);
+} else {
+	if_setposition(0, 2, ^setpos_abs_right, ^setpos_abs_top, $component0);
+	~script4729(interface_90:4, $component0, clearbit(clearbit(36578, 13), 12), ^setpos_abs_right, ^setpos_abs_top, true);
+}
+if (%varbit9495 = 0) {
+	if_settext("---", $component4);
+	if_setcolour(^white, $component4);
+	if_sethide(true, $component3);
+	if_sethide(true, $component6);
+	return;
+}
+def_int $int8 = 0;
+if (%varbit9493 > 0) {
+	$int8 = calc((%varbit9493 - 1) * 5);
+	if ($int8 > 0) {
+		if_settext("<tostring($int8)>-<tostring(calc($int8 + 4))>", $component4);
+	} else {
+		if_settext("1-<tostring(calc($int8 + 4))>", $component4);
+	}
+} else {
+	if_settext("Safe", $component4);
+}
+if (%varbit9494 = 1) {
+	if_sethide(false, $component3);
+} else {
+	if_sethide(true, $component3);
+}
+if_sethide(false, $component6);

@@ -1,0 +1,7 @@
+// 4625
+[clientscript,script4625]
+if (_7003(_6751, _6752, 1) = true) {
+	highlight_npc_off(_6751, _6752, 1);
+} else {
+	highlight_npc_on(_6751, _6752, 1);
+}

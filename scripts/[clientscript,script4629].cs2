@@ -1,0 +1,7 @@
+// 4629
+[clientscript,script4629]
+if (_7008(_6753, 2) = true) {
+	highlight_npctype_off(_6753, 2);
+} else {
+	highlight_npctype_on(_6753, 2);
+}
