@@ -16,16 +16,16 @@ def_int $int5 = 0;
 def_int $int6 = enum_getoutputcount($enum3);
 def_int $int7 = 0;
 def_int $int8 = 0;
-def_int $int9 = 0;
+def_int $setting9 = 0;
 def_int $int10 = 0;
 def_string $string0 = "#";
 while ($int5 < $int6) {
 	$struct4 = enum(int, struct, $enum3, $int5);
 	if ($struct4 ! null) {
 		$int8 = struct_param($struct4, param_1078);
-		$int9 = struct_param($struct4, param_1077);
+		$setting9 = struct_param($struct4, param_1077);
 		if ($int8 = 9) {
-			if ($int9 = %varbit9657) {
+			if ($setting9 = %varbit9657) {
 				$int6 = $int5;
 			} else {
 				$int7 = calc($int7 + 1);
@@ -146,13 +146,25 @@ def_int $int36 = calc($int29 % $int34);
 def_int $int37 = 0;
 if ($int36 > 0) {
 	$int37 = calc($int35 + 1);
+} else {
+	$int37, $int36 = $int35, $int34;
 }
 if ($int37 > $int33) {
+	if_setsize(16, 0, ^setsize_minus, ^setsize_minus, $component15);
+	if_sethide(false, $component16);
 	~scrollbar_vertical($component16, $component15, "scrollbar_dragger_v2,3", "scrollbar_dragger_v2,0", "scrollbar_dragger_v2,1", "scrollbar_dragger_v2,2", "scrollbar_v2,0", "scrollbar_v2,1");
 	$component14 = $component15;
 	$int34 = calc(if_getwidth($component14) / ($int31 + $int30));
 	$int35 = calc($int29 / $int34);
 	$int36 = calc($int29 % $int34);
+	if ($int36 > 0) {
+		$int37 = calc($int35 + 1);
+	} else {
+		$int37, $int36 = $int35, $int34;
+	}
+} else {
+	if_setsize(0, 0, ^setsize_minus, ^setsize_minus, $component15);
+	if_sethide(true, $component16);
 }
 $int17 = 0;
 def_int $int38 = 0;
@@ -183,7 +195,7 @@ while ($int40 < $int37) {
 		cc_setposition($int42, $int43, ^setpos_abs_left, ^setpos_abs_top);
 		cc_setcolour($int41);
 		cc_setfill(true);
-		cc_setonop("script4190(event_opindex, event_com, event_comsubid, $component0, $int41, $component11, $comsubid19, $comsubid20, $struct4, $component12, $comsubid22, $comsubid23, $comsubid24, $comsubid25)");
+		cc_setonop("script4190(event_op, event_com, event_comsubid, $component0, $int41, $component11, $comsubid19, $comsubid20, $struct4, $component12, $comsubid22, $comsubid23, $comsubid24, $comsubid25)");
 		cc_setop(1, "Select colour");
 		$int17 = calc($int17 + 1);
 		if ($boolean46 = false) {
@@ -215,7 +227,7 @@ if ($int37 > $int33) {
 	if_setscrollsize(0, $int43, $component14);
 	~scrollbar_resize($component16, $component14, if_getscrolly($component14));
 }
-~clan_stonebutton_init("<col=ff0000>Cancel</col>", interface_288:12, "p12_full");
+~clan_stonebutton_init("<col=ff981f>Cancel</col>", interface_288:12, "p12_full");
 if_setonop("script4208(^max_32bit_int, interface_288:1, interface_288:2, interface_288:3, $component0)", interface_288:12);
 ~clan_stonebutton_init("<col=0dc10d>Save</col>", interface_288:13, "p12_full");
 if_setonop("script4208(%varcint459, interface_288:1, interface_288:2, interface_288:3, $component0)", interface_288:13);

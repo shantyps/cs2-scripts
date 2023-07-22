@@ -1,11 +1,37 @@
 // 3967
-[proc,settings_set_dropdown](int $int0, int $count1)
-%varbit9657 = $int0;
-switch_int ($int0) {
-	case 169 :
-		setpreference(^pref_ui_scaling_mode, $count1);
-	case 187 :
+[proc,settings_set_dropdown](int $setting0, int $count1)
+%varbit9657 = $setting0;
+switch_int ($setting0) {
+	case 45 :
+		~script3646($count1);
+	case ^setting_interface_scaling_mode :
+		deviceoption_set(^deviceoption_ui_quality, $count1);
+	case ^setting_ore_respawn_timer :
 		~settings_ore_respawn_timer($count1);
-	case 188 :
+	case ^setting_woodcutting_respawn_timer :
 		~settings_woodcutting_respawn_timer($count1);
+	case 214 :
+		~settings_questlist_sort($count1);
+	case 215 :
+		~settings_questlist_requirement_show($count1);
+	case 216 :
+		~script5971($count1);
+	case 222 :
+		~settings_questlist_text_size($count1);
+	case 259 :
+		~settings_npc_indicators_tile($count1);
+	case 258 :
+		~settings_npc_indicators_name($count1);
+	case 264 :
+		~script6471($count1);
+	case 318 :
+		~script7111($count1);
+	case 334 :
+		~script7114($count1);
+	case 336 :
+		~script7114($count1);
+	case 338 :
+		~settings_ground_items_edit_mode($count1);
+	case 340 :
+		~settings_ground_items_modifier_key($count1);
 }

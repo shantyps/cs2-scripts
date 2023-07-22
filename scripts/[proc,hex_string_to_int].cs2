@@ -4,7 +4,7 @@ def_int $length0 = string_length($string0);
 def_string $string1 = "null";
 def_int $int1 = 0;
 def_int $int2 = 0;
-$string0 = ~script1299($string0, "#", "");
+$string0 = ~string_findandreplace($string0, "#", "");
 if ($length0 > 6) {
 	$string0 = substring($string0, 0, 6);
 } else if ($length0 < 6) {
@@ -23,7 +23,7 @@ while ($length3 < $length0) {
 	} else {
 		return(^max_32bit_int);
 	}
-	$int2 = calc($int2 + $int1 * pow(16, 5 - $length3));
+	$int2 = calc($int2 + $int1 * pow(16, calc(5 - $length3)));
 	$length3 = calc($length3 + 1);
 }
 return(~min(16777215, $int2));

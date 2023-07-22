@@ -1,6 +1,6 @@
 // 1397
 [proc,poh_viewer_sideupdate](component $component0, component $component1, component $component2, component $component3, component $component4, component $component5, component $component6, component $component7, component $component8, component $component9, component $component10, component $component11, component $component12, component $component13, component $component14)
-def_int $int15 = calc(pow(7 + 2, 2) * 3);
+def_int $int15 = calc(pow(calc(7 + 2), 2) * 3);
 def_int $int16 = $int15;
 if (%varbit5330 > $int15) {
 	while ($int16 > 0) {
@@ -8,7 +8,7 @@ if (%varbit5330 > $int15) {
 		if (cc_find(interface_422:5, $int16) = ^true) {
 			cc_clearops;
 			cc_setop(1, "Select");
-			cc_setonop("opsound(event_opindex, 2)");
+			cc_setonop("opsound(event_op, 2)");
 			cc_setcolour(0x8f8f8f);
 			cc_setonmouserepeat("cc_colour_swapper(event_com, event_comsubid, ^white)");
 			cc_setonmouseleave("cc_colour_swapper(event_com, event_comsubid, 0x8f8f8f)");
@@ -20,7 +20,7 @@ if (%varbit5330 > $int15) {
 		if (cc_find(interface_422:5, $int16) = ^true) {
 			cc_clearops;
 			cc_setop(6, "Add room");
-			cc_setonop("opsound(event_opindex, 64)");
+			cc_setonop("opsound(event_op, 64)");
 			cc_setcolour(0xafafaf);
 			cc_setonmouserepeat(null);
 			cc_setonmouseleave(null);

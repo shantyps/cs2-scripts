@@ -1,6 +1,6 @@
 // 3562
-[clientscript,poh_costumes_searchresult](obj $obj0, enum $enum1, int $key2)
-if ($key2 ! ^key_return) {
+[clientscript,poh_costumes_searchresult](obj $obj0, enum $enum1, int $int2)
+if ($int2 ! 84) {
 	return;
 }
 sound_synth(interface_select1, 1, 0);
@@ -10,7 +10,7 @@ if ($obj0 = null) {
 	return;
 }
 def_string $string0 = enum(obj, string, enum_3302, $obj0);
-def_int $int3 = calc(4 + 32);
+def_int $int3 = calc(4 + 35);
 def_int $int4 = enum_getoutputcount($enum1);
 while ($int4 > 0) {
 	$int4 = calc($int4 - 1);

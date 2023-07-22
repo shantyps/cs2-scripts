@@ -1,14 +1,7 @@
 // 4562
-[clientscript,script4562](int $int0, int $int1, string $string0, string $string1)
-if (~on_enhanced_any = 0) {
-	return;
-}
-~script4743;
-~fishing_spot_indicator_tile_setup;
-~antidrag_toggle;
-~script4687($int0);
-~synch_always_on_top(%varbit12372);
-~helper_agility_highlight_course(-1);
-~helper_agility_highlight_setup;
-~script5183;
-~xptracker_login($int1, $string0, $string1);
+[clientscript,script4562](component $component0, component $component1, component $component2, component $component3)
+~script4576($component0, "arrows_curved,0", "Rotate Clockwise", 1, $component3);
+~script4576($component1, "arrows_curved,3", "Rotate Anticlockwise", -1, $component3);
+~script5919($component2, null, "Confirm");
+if_setonvartransmit("script6031($component3){var3421}", $component3);
+~script6032($component3);

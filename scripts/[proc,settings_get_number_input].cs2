@@ -1,14 +1,34 @@
 // 3964
-[proc,settings_get_number_input](int $int0)(int)
-switch_int ($int0) {
-	case 39 :
+[proc,settings_get_number_input](int $setting0)(int)
+switch_int ($setting0) {
+	case ^setting_loot_drop_notification_value :
 		return(%varbit5400);
-	case 43 :
+	case ^setting_drop_item_warnings_value :
 		return(%varbit5412);
-	case 66 :
+	case ^setting_warning_alch_minimum_value :
 		return(%varbit6091);
 	case 200 :
 		return(%varbit13121);
+	case 233 :
+		return(%varbit13835);
+	case 236 :
+		return(%varbit13830);
+	case 249 :
+		return(%varbit14176);
+	case 280 :
+		return(%varbit14195);
+	case 328 :
+		return(%var3800);
+	case 329 :
+		return(%var3801);
+	case 330 :
+		return(%var3802);
+	case 331 :
+		return(%var3803);
+	case 332 :
+		return(%var3804);
+	case 350 :
+		return(%varbit15021);
 	case default :
 		return(0);
 }

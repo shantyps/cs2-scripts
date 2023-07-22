@@ -9,7 +9,7 @@ if (~on_mobile = true) {
 	$int19 = calc(165 - (23 + 30));
 }
 ~script4215($component2, "Close");
-if_setonop("opsound(event_opindex, 2)", $component2);
+if_setonop("opsound(event_op, 2)", $component2);
 if_setopkey(1, ^key_escape, 0, $component2);
 if_setop(1, "Take-All", $component8);
 ~gravestone_generic_resetbutton($component8, $component9);
@@ -79,7 +79,7 @@ while ($int18 < 4) {
 	$int18 = calc($int18 + 1);
 }
 def_int $int21 = calc(12 + parawidth(~gravestone_generic_parsecoffer(^max_32bit_int), 512, p11_full) + 2 + 10);
-def_int $int22 = calc(14 + ~max(32 + 4, 42) + 2);
+def_int $int22 = calc(14 + ~max(calc(32 + 4), 42) + 2);
 def_int $int23 = 109;
 def_int $int24 = calc(40 + $int22 + $int23 + 10);
 if (%varcint395 < $int21) {

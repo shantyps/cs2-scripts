@@ -7,8 +7,8 @@ switch_struct ($struct0) {
 		return("Barrows Chests opened: <col=ffffff><~script2734(%var2048)></col>", "", "");
 	case bryophyta_478 :
 		return("Bryophyta kills: <col=ffffff><~script2734(%var2048)></col>", "", "");
-	case callisto_479 :
-		return("Callisto kills: <col=ffffff><~script2734(%var2048)></col>", "", "");
+	case callisto_and_artio_479 :
+		return("Artio kills: <col=ffffff><~script2734(%var2048)></col>", "Callisto kills: <col=ffffff><~script2734(%var2941)></col>", "");
 	case cerberus_480 :
 		return("Cerberus kills: <col=ffffff><~script2734(%var2048)></col>", "", "");
 	case chaos_elemental_481 :
@@ -51,10 +51,10 @@ switch_struct ($struct0) {
 		return("TzKal-Zuk kills: <col=ffffff><~script2734(%var2048)></col>", "", "");
 	case the_fight_caves_500 :
 		return("TzTok-Jad kills: <col=ffffff><~script2734(%var2048)></col>", "", "");
-	case venenatis_501 :
-		return("Venenatis kills: <col=ffffff><~script2734(%var2048)></col>", "", "");
-	case vetion_502 :
-		return("Vet'ion kills: <col=ffffff><~script2734(%var2048)></col>", "", "");
+	case venenatis_and_spindel_501 :
+		return("Spindel kills: <col=ffffff><~script2734(%var2048)></col>", "Venenatis kills: <col=ffffff><~script2734(%var2941)></col>", "");
+	case vetion_and_calvarion_502 :
+		return("Calvar'ion kills: <col=ffffff><~script2734(%var2048)></col>", "Vet'ion kills: <col=ffffff><~script2734(%var2941)></col>", "");
 	case vorkath_503 :
 		return("Vorkath kills: <col=ffffff><~script2734(%var2048)></col>", "", "");
 	case wintertodt_504 :
@@ -67,6 +67,8 @@ switch_struct ($struct0) {
 		return("Chambers of Xeric (CM) completions: <col=ffffff><~script2734(%var2048)></col>", "Chambers of Xeric completions: <col=ffffff><~script2734(%var2941)></col>", "");
 	case theatre_of_blood_506 :
 		return("Theatre of Blood (Hard) completions: <col=ffffff><~script2734(%var2942)></col>", "Theatre of Blood (Entry) completions: <col=ffffff><~script2734(%var2941)></col>", "Theatre of Blood completions: <col=ffffff><~script2734(%var2048)></col>");
+	case tombs_of_amascut_4378 :
+		return("Tombs of Amascut (Expert) completions: <col=ffffff><~script2734(%var2942)></col>", "Tombs of Amascut (Entry) completions: <col=ffffff><~script2734(%var2941)></col>", "Tombs of Amascut completions: <col=ffffff><~script2734(%var2048)></col>");
 	case beginner_treasure_trails_593 :
 		return("Beginner clues completed: <col=ffffff><~script2734(%var2048)></col>", "", "");
 	case easy_treasure_trails_508 :
@@ -115,6 +117,12 @@ switch_struct ($struct0) {
 		return("Spoils of war opened: <col=ffffff><~script2734(%var2048)></col>", "", "");
 	case nex_3769 :
 		return("Nex kills: <col=ffffff><~script2734(%var2048)></col>", "", "");
+	case phantom_muspah_4455 :
+		return("Phantom Muspah kills: <col=ffffff><~script2734(%var2048)></col>", "", "");
+	case guardians_of_the_rift_4274 :
+		return("Rifts closed: <col=ffffff><~script2734(%var2048)></col>", "Rifts searches: <col=ffffff><~script2734(%var2941)></col>", "");
+	case giants_foundry_4359 :
+		return("Swords created: <col=ffffff><~script2734(%var2048)></col>", "", "");
 	case default :
 		return("", "", "");
 }

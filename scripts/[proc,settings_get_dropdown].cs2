@@ -1,8 +1,8 @@
 // 3962
-[proc,settings_get_dropdown](int $int0)(int)
+[proc,settings_get_dropdown](int $setting0)(int)
 def_int $windowmode1 = 0;
-switch_int ($int0) {
-	case 1 :
+switch_int ($setting0) {
+	case ^setting_chatbox_scrollbar_pos :
 		return(%varbit6374);
 	case 55 :
 		return(%var1107);
@@ -12,7 +12,7 @@ switch_int ($int0) {
 		return(%varbit6255);
 	case 86 :
 		return(%varbit12135);
-	case 12 :
+	case ^setting_windowmode :
 		$windowmode1 = getwindowmode;
 		if ($windowmode1 = ^windowmode_fixed) {
 			return(0);
@@ -30,19 +30,49 @@ switch_int ($int0) {
 	case 119 :
 		return(%varbit12384);
 	case 45 :
-		return(~script4576);
+		return(~script3645);
 	case 150 :
 		return(%varbit12375);
-	case 169 :
-		return(getpreference(^pref_ui_scaling_mode));
-	case 187 :
+	case ^setting_interface_scaling_mode :
+		return(deviceoption_get(^deviceoption_ui_quality));
+	case ^setting_ore_respawn_timer :
 		return(%varbit13085);
-	case 188 :
+	case ^setting_woodcutting_respawn_timer :
 		return(%varbit13086);
 	case 165 :
 		return(%varbit13135);
 	case 207 :
 		return(%varbit13132);
+	case 214 :
+		return(%varbit13772);
+	case 215 :
+		return(%varbit13778);
+	case 216 :
+		return(%varbit13779);
+	case 222 :
+		return(%varbit13780);
+	case 237 :
+		return(enum(int, int, enum_4302, %varbit13828));
+	case 238 :
+		return(enum(int, int, enum_4302, %varbit13829));
+	case 259 :
+		return(%varbit14171);
+	case 258 :
+		return(%varbit14169);
+	case 264 :
+		return(%varbit14178);
+	case 301 :
+		return(%varbit14708);
+	case 318 :
+		return(deviceoption_get(20));
+	case 334 :
+		return(%varbit14873);
+	case 336 :
+		return(%varbit14875);
+	case 338 :
+		return(%varbit14871);
+	case 340 :
+		return(enum(int, int, enum_4975, %varbit14877));
 	case default :
 		return(0);
 }

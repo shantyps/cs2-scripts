@@ -1,6 +1,12 @@
 // 5353
-[proc,script5353]
-_7000(5, 0xc0c000, 2, 0, 1);
-_7010(5, 0x00c0c0, 2, 0, 1);
-_7020(5, 0xc06030, 2, 0, 1);
-_7030(5, 0xc0c0c0, 2, 0, 1);
+[proc,script5353](int $flags0, int $flags1, int $int2)(int)
+def_int $index3 = calc($int2 % 32);
+def_int $int4 = calc($int2 / 32);
+switch_int ($int4) {
+	case 0 :
+		return(testbit($flags0, $index3));
+	case 1 :
+		return(testbit($flags1, $index3));
+	case default :
+		return(0);
+}

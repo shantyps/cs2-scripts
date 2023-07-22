@@ -163,8 +163,11 @@ switch_int ($int0) {
 	case 1 :
 		switch_int ($int1) {
 			case 0 :
-				return(-1, ancient_staff_4675, "Ancient magicks are available after<br>completing the Desert Treasure quest.");
+				return(-1, ancient_staff_4675, "Ancient magicks are available after<br>completing the Desert Treasure I quest.");
 			case 1 :
+				if (~league_world = 1 & %varbit10032 = 3) {
+					return(-1, catherby_home_teleport_26563, "Home teleport (Catherby)");
+				}
 				return(-1, edgeville_home_teleport_11142, "Home teleport (Edgeville)");
 			case 2 :
 				return(50, smoke_rush_4629, "Smoke rush");
@@ -183,7 +186,7 @@ switch_int ($int0) {
 			case 9 :
 				return(64, shadow_burst_4636, "Shadow burst");
 			case 10 :
-				return(66, kharyrll_teleport_4637, "Kharyll teleport");
+				return(66, kharyrll_teleport_4637, "Kharyrll teleport");
 			case 11 :
 				return(68, blood_burst_4638, "Blood burst");
 			case 12 :
@@ -224,6 +227,9 @@ switch_int ($int0) {
 			case 0 :
 				return(-1, lunar_staff_9084, "Lunar spells are available after<br>completing the Lunar Diplomacy quest.");
 			case 1 :
+				if (~league_world = 1 & %varbit10032 = 3) {
+					return(-1, catherby_home_teleport_26564, "Home teleport (Catherby)");
+				}
 				return(-1, lunar_home_teleport_11143, "Home teleport (Lunar Isle)");
 			case 2 :
 				return(65, bake_pie_9107, "Bake pie");
@@ -321,6 +327,9 @@ switch_int ($int0) {
 			case 0 :
 				return(-1, obj_13578, "Arceuus spells are unlocked<br>in Arceuus.");
 			case 1 :
+				if (~league_world = 1 & %varbit10032 = 3) {
+					return(-1, catherby_home_teleport_26565, "Home teleport (Catherby)");
+				}
 				return(-1, arceuus_home_teleport_21835, "Home teleport (Dark Altar)");
 			case 2 :
 				return(6, arceuus_library_teleport_20409, "Arceuus Library teleport");
@@ -471,7 +480,7 @@ switch_int ($int0) {
 			case 4 :
 				return(27, emerald_bolts_e_9241, "Emerald-tipped crossbow bolts<br>1 cosmic + 3 air + 1 nature rune");
 			case 5 :
-				return(29, topaz_bolts_e_9239, "Red topaz-tipped crossbow bolts<br>1 cosmic + 2 blood runes");
+				return(29, topaz_bolts_e_9239, "Red topaz-tipped crossbow bolts<br>1 cosmic + 2 fire runes");
 			case 6 :
 				return(49, ruby_bolts_e_9242, "Ruby-tipped crossbow bolts<br>1 cosmic + 5 fire + 1 blood rune");
 			case 7 :
@@ -486,53 +495,61 @@ switch_int ($int0) {
 	case 6 :
 		switch_int ($int1) {
 			case 0 :
-				return(30, battlestaff_1391, "Battlestaves (with 30 Attack)");
+				return(30, battlestaff_1391, "Members: Battlestaves (with 30 Attack)");
 			case 1 :
 				return(30, bryophytas_staff_22370, "Bryophyta's staff (with 30 Attack)");
 			case 2 :
-				return(40, mystic_air_staff_1405, "Mystic staves (with 40 Attack)");
+				return(40, mystic_air_staff_1405, "Members: Mystic staves (with 40 Attack)");
 			case 3 :
-				return(42, void_knight_mace_8841, "Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
+				return(42, void_knight_mace_8841, "Members: Void Knight equipment<br>(with 42 combat stats and 22 Prayer)");
 			case 4 :
-				return(45, beginner_wand_6908, "Beginner wand");
+				return(45, beginner_wand_6908, "Members: Beginner wand");
 			case 5 :
-				return(50, apprentice_wand_6910, "Apprentice wand");
+				return(50, apprentice_wand_6910, "Members: Apprentice wand");
 			case 6 :
-				return(50, ancient_staff_4675, "Ancient staff<br> (after Desert Treasure, with 50 Attack)");
+				return(50, ancient_staff_4675, "Members: Ancient staff<br> (requires Desert Treasure I and 50 Attack)");
 			case 7 :
-				return(50, slayers_staff_4170, "Slayer's staff<br> (with 55 Slayer)");
+				return(50, slayers_staff_4170, "Members: Slayer's staff<br> (with 55 Slayer)");
 			case 8 :
-				return(55, teacher_wand_6912, "Teacher wand");
+				return(55, teacher_wand_6912, "Members: Teacher wand");
 			case 9 :
-				return(60, master_wand_6914, "Master wand");
+				return(60, master_wand_6914, "Members: Master wand");
 			case 10 :
-				return(60, thammarons_sceptre_22555, "Thammaron's Sceptre");
+				return(60, thammarons_sceptre_22555, "Members: Thammaron's Sceptre");
 			case 11 :
-				return(60, guthix_staff_2416, "God staves<br> (after Mage Arena)");
+				return(60, guthix_staff_2416, "Members: God staves<br> (requires Mage Arena I)");
 			case 12 :
-				return(60, toktz_mej_tal_6526, "TokTz-Mej-Tal<br> (with 60 Attack)");
+				return(60, toktz_mej_tal_6526, "Members: TokTz-Mej-Tal<br> (with 60 Attack)");
 			case 13 :
-				return(65, 3rd_age_wand_12422, "3rd age wand");
+				return(65, 3rd_age_wand_12422, "Members: 3rd age wand");
 			case 14 :
-				return(65, nightmare_staff_24422, "Nightmare Staff (without orb)<br> (with 50 Hitpoints)");
+				return(70, ahrims_staff_4710, "Members: Ahrim's staff<br> (with 70 Attack)");
 			case 15 :
-				return(70, ahrims_staff_4710, "Ahrim's staff<br> (with 70 Attack)");
+				return(70, ancient_sceptre_27624, "Members: Ancient sceptre<br> (requires Secrets of the North, 50 Attack and 60 Strength)");
 			case 16 :
-				return(75, staff_of_the_dead_11791, "Staff of the Dead (with 75 Attack)");
+				return(70, accursed_sceptre_27665, "Members: Accursed Sceptre");
 			case 17 :
-				return(75, staff_of_light_22296, "Staff of Light (with 75 Attack)");
+				return(72, nightmare_staff_24422, "Members: Nightmare Staff (without orb)<br> (with 50 Hitpoints)");
 			case 18 :
-				return(75, staff_of_balance_24144, "Staff of Balance<br> (with 75 Attack)");
+				return(75, staff_of_the_dead_11791, "Members: Staff of the Dead (with 75 Attack)");
 			case 19 :
-				return(75, trident_of_the_seas_full_11905, "Trident of the Seas");
+				return(75, staff_of_light_22296, "Members: Staff of Light (with 75 Attack)");
 			case 20 :
-				return(75, kodai_wand_21006, "Kodai Wand");
+				return(75, staff_of_balance_24144, "Members: Staff of Balance<br> (with 75 Attack)");
 			case 21 :
-				return(75, slayers_staff_e_21255, "Slayer's staff (e)<br> (with 55 Slayer)");
+				return(75, trident_of_the_seas_full_11905, "Members: Trident of the Seas");
 			case 22 :
-				return(75, sanguinesti_staff_22323, "Sanguinesti staff");
+				return(75, slayers_staff_e_21255, "Members: Slayer's staff (e)<br> (with 55 Slayer)");
 			case 23 :
-				return(75, harmonised_nightmare_staff_24423, "Nightmare Staff (with orb)<br> (with 50 Hitpoints)");
+				return(78, trident_of_the_swamp_12899, "Members: Trident of the Swamp");
+			case 24 :
+				return(80, kodai_wand_21006, "Members: Kodai Wand");
+			case 25 :
+				return(82, sanguinesti_staff_22323, "Members: Sanguinesti staff");
+			case 26 :
+				return(82, harmonised_nightmare_staff_24423, "Members: Nightmare Staff (with orb)<br> (with 50 Hitpoints)");
+			case 27 :
+				return(85, tumekens_shadow_27275, "Members: Tumeken's Shadow");
 			case default :
 				return(-1, null, "");
 		}
@@ -545,7 +562,9 @@ switch_int ($int0) {
 			case 2 :
 				return(66, ancient_wyvern_shield_21633, "Make Ancient Wyvern shield");
 			case 3 :
-				return(70, ancient_wyvern_shield_21633, "Wield Ancient Wyvern shield");
+				return(70, ancient_wyvern_shield_21633, "Wield Ancient Wyvern shield<br>(with 75 Defence)");
+			case 4 :
+				return(80, elidinis_ward_25985, "Elidinis' Ward<br>(with 80 Prayer and 80 Defence)");
 			case default :
 				return(-1, null, "");
 		}

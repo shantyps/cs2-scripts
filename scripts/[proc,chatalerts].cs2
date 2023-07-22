@@ -33,7 +33,7 @@ while ($mesuid0 ! -1) {
 				if ($boolean7 = false) {
 					~chat_alert_enable(3);
 				}
-			case ^chattype_tradereq, ^chattype_trade, ^chattype_chalreq_trade :
+			case ^chattype_tradereq, ^chattype_trade, ^chattype_chalreq_trade, 113 :
 				~chat_alert_enable(6);
 			case ^chattype_friendschat, ^chattype_friendschatnotification, ^chattype_chalreq_friendschat :
 				~chat_alert_enable(4);
@@ -45,6 +45,8 @@ while ($mesuid0 ! -1) {
 				}
 			case ^chattype_clanmessage :
 				if (~gim_notification_message($string2) = 1) {
+					~chat_alert_enable(1);
+				} else if (~pvpa_notification_message($string2) = 1) {
 					~chat_alert_enable(1);
 				} else {
 					~chat_alert_enable(5);

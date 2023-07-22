@@ -14,4 +14,4 @@ while ($size2 < $size1) {
 }
 ~tackle_box_side_draw($size1, $component0);
 if_setoninvtransmit("tackle_box_side_draw($size1, $component0){inv}", $component0);
-if_setonvartransmit("tackle_box_side_draw($size1, $component0){var675}", $component0);
+if_setonvartransmit("tackle_box_side_draw($size1, $component0){var2894}", $component0);

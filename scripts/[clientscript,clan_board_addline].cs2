@@ -1,6 +1,6 @@
 // 4357
 [clientscript,clan_board_addline](int $int0, string $string0, int $flags1)
-if (if_hassub(enum(component, component, ~toplevel_getcomponents, interface_161:16)) = false) {
+if (if_hassub(enum(component, component, ~toplevel_getcomponents, toplevel_osrs_stretch:16)) = false) {
 	return;
 }
 def_component $component2 = enum(int, component, enum_3803, $int0);
@@ -69,7 +69,7 @@ if (string_length($string0) > 0) {
 	if (string_length($string7) > 0) {
 		$flags3 = setbit($flags3, 1);
 	}
-	$int4 = calc(paraheight($string5, if_getwidth(interface_700:20) - 4, p12_full) * 12 + 3);
+	$int4 = calc(paraheight($string5, calc(if_getwidth(interface_700:20) - 4), p12_full) * 12 + 3);
 	cc_create($component2, ^iftype_text, 4);
 	cc_setposition(0, 22, ^setpos_abs_centre, ^setpos_abs_top);
 	cc_setsize(4, $int4, ^setsize_minus, ^setsize_abs);

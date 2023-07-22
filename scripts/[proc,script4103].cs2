@@ -10,7 +10,7 @@ switch_struct ($struct0) {
 		return(%varbit11964);
 	case bryophyta_478 :
 		return(%varbit11965);
-	case callisto_479 :
+	case callisto_and_artio_479 :
 		return(%varbit11966);
 	case cerberus_480 :
 		return(%varbit11967);
@@ -54,9 +54,9 @@ switch_struct ($struct0) {
 		return(%varbit11986);
 	case the_fight_caves_500 :
 		return(%varbit11987);
-	case venenatis_501 :
+	case venenatis_and_spindel_501 :
 		return(%varbit11988);
-	case vetion_502 :
+	case vetion_and_calvarion_502 :
 		return(%varbit11989);
 	case vorkath_503 :
 		return(%varbit11990);
@@ -80,10 +80,14 @@ switch_struct ($struct0) {
 		return(%varbit12049);
 	case nex_3769 :
 		return(%varbit13191);
+	case phantom_muspah_4455 :
+		return(%varbit6642);
 	case theatre_of_blood_506 :
 		return(%varbit11994);
 	case chambers_of_xeric_507 :
 		return(%varbit11995);
+	case tombs_of_amascut_4378 :
+		return(%varbit14475);
 	case beginner_treasure_trails_593 :
 		return(%varbit11996);
 	case easy_treasure_trails_508 :
@@ -134,6 +138,10 @@ switch_struct ($struct0) {
 		return(%varbit12015);
 	case soul_wars_2825 :
 		return(%varbit12047);
+	case guardians_of_the_rift_4274 :
+		return(%varbit13785);
+	case giants_foundry_4359 :
+		return(%varbit13957);
 	case revenants_525 :
 		return(%varbit12016);
 	case gloughs_experiments_526 :
@@ -182,6 +190,8 @@ switch_struct ($struct0) {
 		return(%varbit12048);
 	case camdozaal_2885 :
 		return(%varbit12129);
+	case forestry_4553 :
+		return(%varbit14953);
 	case default :
 		return(0);
 }
